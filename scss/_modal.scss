@@ -129,7 +129,7 @@
   width: 100vw;
   height: 100vh;
   background-color: $modal-backdrop-bg;
-
+  opacity: 0.6;
   // Fade for backdrop
   &.fade { opacity: 0; }
   &.show { opacity: $modal-backdrop-opacity; }
