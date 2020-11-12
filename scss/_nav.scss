@@ -14,9 +14,9 @@
 .nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
+  text-decoration: if($link-decoration == none, null, none);
 
-  &:hover,
-  &:focus {
+  @include hover-focus() {
     text-decoration: none;
   }
 
@@ -43,8 +43,7 @@
     border: $nav-tabs-border-width solid transparent;
     @include border-top-radius($nav-tabs-border-radius);
 
-    &:hover,
-    &:focus {
+    @include hover-focus() {
       border-color: $nav-tabs-link-hover-border-color;
     }
 
@@ -93,6 +92,7 @@
 //
 
 .nav-fill {
+  > .nav-link,
   .nav-item {
     flex: 1 1 auto;
     text-align: center;
@@ -100,6 +100,7 @@
 }
 
 .nav-justified {
+  > .nav-link,
   .nav-item {
     flex-basis: 0;
     flex-grow: 1;
